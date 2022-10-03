@@ -2,6 +2,7 @@ package net.homenet.chapter02.service;
 
 import net.homenet.chapter02.domain.Item;
 import net.homenet.chapter02.repository.ItemRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ public class InventoryService {
 
     private final ItemRepository itemRepository;
 
+    @Autowired
     public InventoryService(ItemRepository itemRepository) {
         this.itemRepository = itemRepository;
     }
